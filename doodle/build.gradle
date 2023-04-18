@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven-publish'
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
 
@@ -16,7 +16,19 @@ android {
         }
     }
 }
-
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.whosmyqueen'
+                artifactId = 'doodle'
+                version = '1.0.0'
+            }
+        }
+    }
+}
 dependencies {
     // https://github.com/1993hzw/Androids
     api 'com.github.1993hzw:Androids:1.3'
