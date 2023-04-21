@@ -30,6 +30,5 @@ public class DoodleGuideActivity extends Activity {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.thelittleprince2);
         AdvancedDoodleView advancedDoodleView = new AdvancedDoodleView(this, bitmap);
         advancedContainer.addView(advancedDoodleView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-
     }
 }

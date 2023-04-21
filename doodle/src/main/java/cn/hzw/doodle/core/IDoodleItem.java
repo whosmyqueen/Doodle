@@ -78,6 +78,7 @@ public interface IDoodleItem {
 
     /**
      * 画在所有item的上面
+     *
      * @param canvas
      */
     void drawAtTheTop(Canvas canvas);
@@ -164,6 +165,7 @@ public interface IDoodleItem {
 
     /**
      * item是否可以编辑。用于编辑模式下对item的操作
+     *
      * @return
      */
     public boolean isDoodleEditable();
@@ -177,9 +179,14 @@ public interface IDoodleItem {
 
     /**
      * 监听器
+     *
      * @param listener
      */
     public void addItemListener(IDoodleItemListener listener);
 
     public void removeItemListener(IDoodleItemListener listener);
+
+    Object getBind();
+
+    void setBind(Object bind);
 }

@@ -1,5 +1,7 @@
 package cn.hzw.doodle;
 
+import static cn.hzw.doodle.util.DrawUtil.rotatePoint;
+
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
@@ -8,8 +10,6 @@ import android.graphics.Rect;
 import cn.hzw.doodle.core.IDoodle;
 import cn.hzw.doodle.core.IDoodleSelectableItem;
 import cn.hzw.doodle.util.DrawUtil;
-
-import static cn.hzw.doodle.util.DrawUtil.rotatePoint;
 
 /**
  * 可选择的涂鸦item，例如文字、图片

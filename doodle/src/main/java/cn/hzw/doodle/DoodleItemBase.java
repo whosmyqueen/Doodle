@@ -38,6 +38,17 @@ public abstract class DoodleItemBase implements IDoodleItem, IDoodleItemListener
 
     private boolean mHasAdded = false;
 
+    private Object bind;
+
+    @Override
+    public Object getBind() {
+        return bind;
+    }
+
+    public void setBind(Object bind) {
+        this.bind = bind;
+    }
+
     private List<IDoodleItemListener> mItemListeners = new ArrayList<>();
 
     public DoodleItemBase(IDoodle doodle) {
